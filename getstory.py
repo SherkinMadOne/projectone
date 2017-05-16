@@ -26,7 +26,7 @@ try :
     if not pagenumber :
         pagenumber = 1
 
-    connection = db.connect('cs1.ucc.ie', 'km32', 'pohcuche', 'csdipact2017_km32')
+    connection = db.connect('server', 'user id', 'password', 'db name')
     cursor = connection.cursor(db.cursors.DictCursor)
 
     cursor.execute("""SELECT story from gingerman WHERE line = %s""" , (pagenumber))
